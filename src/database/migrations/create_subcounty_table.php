@@ -14,7 +14,9 @@ class CreateSubcountyTable extends Migration
     public function up()
     {
         //drop ifexists
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists(KenyaCounty::getCountyTable());
+        Schema::enableForeignKeyConstraints();
 
         Schema::create(KenyaCounty::getSubCountyTable(), function (Blueprint $table) {
             $table->increments('id');

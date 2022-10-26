@@ -15,7 +15,9 @@ class CreateWardsTable extends Migration
     public function up()
     {
         //drop if exists
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists(KenyaCounty::getCountyTable());
+        Schema::enableForeignKeyConstraints();
 
         Schema::create(KenyaCounty::getWardTable(), function (Blueprint $table) {
             $table->increments('id');
