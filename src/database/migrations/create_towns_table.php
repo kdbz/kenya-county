@@ -16,7 +16,7 @@ class CreateWardsTable extends Migration
     {
         //drop if exists
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists(KenyaCounty::getCountyTable());
+        Schema::dropIfExists(KenyaCounty::getWardTable());
         Schema::enableForeignKeyConstraints();
 
         Schema::create(KenyaCounty::getWardTable(), function (Blueprint $table) {
