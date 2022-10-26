@@ -55,7 +55,7 @@ class KCounty implements OnEachRow
         $county_table = KenyaCounty::getCountyTable();
         $result = DB::table($county_table)->where('name',$county)->select('id')->get();
         if($result->isEmpty())
-           $id = DB::table($county_table)->insertGetId(['name' => $county]);
+           $id = DB::table($county_table)->insertGetId(['name' => $county,'created_at'=>date('Y_m_d_His', time())]);
         else
             $id = $result->first()->id;
         
@@ -74,7 +74,7 @@ class KCounty implements OnEachRow
         $result = DB::table($subcounty_table)->where('name',$scounty)->select('id')->get();
         
         if($result->isEmpty())
-           $id = DB::table($subcounty_table)->insertGetId(['name' => $scounty,'county_id'=>$county_id]);
+           $id = DB::table($subcounty_table)->insertGetId(['name' => $scounty,'county_id'=>$county_id,'created_at'=>date('Y_m_d_His', time())]);
         else
           $id = $result->first()->id;
         
@@ -108,7 +108,7 @@ class KCounty implements OnEachRow
         
         $sc_id = $this->getSubCountyId($sc_name);
         //insert
-        DB::table($ward_table)->insert(['name' => $ward,'sc_id'=>$sc_id]);
+        DB::table($ward_table)->insert(['name' => $ward,'sc_id'=>$sc_id,'created_at'=>date('Y_m_d_His', time())]);
     }
 
     public static function test(){
