@@ -39,7 +39,7 @@ class KenyaCountyServiceProvider extends ServiceProvider
         ], 'kenyacounty-migrations');
 
         $this->publishes([
-            __DIR__ . '/database/migrations/create_towns_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_towns_table.php'),
+            __DIR__ . '/database/migrations/create_wards_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_wards_table.php'),
         ], 'kenyacounty-migrations');
         
         $this->publishes([
