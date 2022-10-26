@@ -6,6 +6,7 @@ KenyaCounty is a laravel package that creates and seeds Kenya's :kenya: county,s
 <p style="align:center">
     <img alt="DB Schema" src="https://github.com/kdbz/kenya-county/blob/main/schema.png" style="width:50%;">
 </p>
+
 ## Installation
 
 Use the package manager [composer](https://getcomposer.org/) to install KenyaCounty within your laravel project.
