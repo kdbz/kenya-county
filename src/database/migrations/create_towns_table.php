@@ -14,6 +14,9 @@ class CreateWardsTable extends Migration
      */
     public function up()
     {
+        //drop if exists
+        Schema::dropIfExists(KenyaCounty::getCountyTable());
+
         Schema::create(KenyaCounty::getWardTable(), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',200);

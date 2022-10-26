@@ -13,6 +13,9 @@ class CreateSubcountyTable extends Migration
      */
     public function up()
     {
+        //drop ifexists
+        Schema::dropIfExists(KenyaCounty::getCountyTable());
+
         Schema::create(KenyaCounty::getSubCountyTable(), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',100);
