@@ -43,6 +43,9 @@ Seed the database
 ```bash
 $ php artisan db:seed --class=KenyaCountySeeder
 ```
+## Acknowledgements
+
+ - [Laravel Excel](https://github.com/SpartnerNL/Laravel-Excel)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
