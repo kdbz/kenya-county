@@ -1,0 +1,32 @@
+{
+    "name": "kdbz/kenya-county",
+    "description": "A laravel package that creates and seeds Kenya's county,subcounty and wards lookup tables to a MySQL database",
+    "type": "library",
+    "require": {
+        "maatwebsite/excel": "^3.1",
+        "php": ">=8.0.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kdbz\\KenyaCounty\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kdbz\\KenyaCounty\\KenyaCountyServiceProvider"
+            ],
+            "aliases": {
+                "KenyaCounty": "Kdbz\\KenyaCounty\\Facades\\KenyaCountyFacade"
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "kdbz",
+            "email": "kinyuawallace@gmail.com",
+            "role":"Developer"
+        }
+    ]
+}
