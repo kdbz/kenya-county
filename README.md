@@ -3,8 +3,9 @@
 KenyaCounty is a laravel package that creates and seeds Kenya's :kenya: county,subcounty and wards lookup tables to a MySQL database.
 
 ## DB Structure
-![Schema Diagram](https://github.com/kdbz/kenya-county/blob/main/schema.png|width=200)
-
+<p style="align:center">
+    <img alt="DB Schema" src="https://github.com/kdbz/kenya-county/blob/main/schema.png" style="width:50%;">
+</p>
 ## Installation
 
 Use the package manager [composer](https://getcomposer.org/) to install KenyaCounty within your laravel project.
